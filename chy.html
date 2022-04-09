@@ -12407,6 +12407,10 @@
     function jumpIndex(){
         location.href='https://cy-17.github.io/scut-chy/'; 
     }
+    //禁止页面拖动
+  document.addEventListener('touchmove', function(e) {
+    e.preventDefault();
+  }, { passive: false });
 
 </script>
 
