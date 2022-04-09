@@ -12404,10 +12404,20 @@
         submit.style.display = 'none'
         disabled.style.display = 'block'
     }
+    console.log(11111);
 
-    pushHistory(); 
+
+//  pushHistory(); 
+
+//  window.addEventListener("popstate", function(e) { //回调函数中实现需要的功能
+//   console.log(111111111111111);
+//   location.href='file:///C:/Users/mi/Desktop/%E5%90%84%E7%A7%8D%E6%96%87%E4%BB%B6/mypass/scut-chy/index.html'; //在这里指定其返回的地址
+//  }, false); 
+
+ pushHistory(); 
     window.addEventListener("popstate", function(e) { 
         alert("我监听到了浏览器的返回按钮事件啦");//根据自己的需求实现自己的功能 
+  location.href='file:///C:/Users/mi/Desktop/%E5%90%84%E7%A7%8D%E6%96%87%E4%BB%B6/mypass/scut-chy/index.html'; //在这里指定其返回的地址
     }, false); 
     function pushHistory() { 
         var state = { 
@@ -12416,6 +12426,15 @@
         }; 
         window.history.pushState(state, "title", "#"); 
     }
+
+// function pushHistory() { 
+//  var state = { 
+//   title: "title", 
+//   url: "file:///C:/Users/mi/Desktop/%E5%90%84%E7%A7%8D%E6%96%87%E4%BB%B6/mypass/scut-chy/index.html" 
+//  }; 
+//  window.history.pushState(state, state.title, state.url); 
+// }
+
 </script>
 
 </body></html>
